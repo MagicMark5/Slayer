@@ -1,0 +1,219 @@
+* {
+  font-family: "Aldrich", sans-serif;
+  font-size: 1.2vw;
+  box-sizing: border-box; 
+}
+
+body {
+  text-align: center;
+}
+
+.healthHeader {
+  position: relative;
+}
+
+.healthBar {
+  background-color: black;
+  position: relative;
+  height: 15px;
+  width: 200px;
+  max-width: 200px;
+  padding: 2px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+  -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+  display: inline-block;
+  margin: 0px auto;
+}
+
+.health {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  -webkit-transition: width .4s ease-in-out;
+  -moz-transition: width .4s ease-in-out;
+  -ms-transition: width .4s ease-in-out;
+  -o-transition: width .4s ease-in-out;
+  transition: width .4s ease-in-out;		
+}
+
+#dragonDivBar, #dragonHealth {
+  display: block;
+  left: 101px;
+  top: 15px;
+}
+
+#playerDivBar, #playerHealth {
+  display: block;
+  right: 102px;
+}
+
+#user-HP, #enemy-HP {
+  float: right;
+  padding-right: 5px;
+}
+
+.hit-points {
+  display: inline-block;
+  border: 3px solid gray;
+  border-radius: 6px;  
+  width: 16%;
+  height: 27px;
+  margin: 10px auto; 
+  margin-bottom: 0;
+  padding: 2px;
+  padding-left: 10px;
+  text-align: left;
+  overflow: scroll;
+  clear: left;
+}
+
+.damage {
+  visibility: visible;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  margin: 0;
+  padding: 0; 
+  height: 5px;
+  width: 5px; /* height/width is needed so that HP divs don't move when these appear */
+}
+
+#yourDamage {
+  right: 30px;
+}
+
+#dragonDamage {
+  left: 15px;
+}
+
+.damage.shake {
+  visibility: visible;
+  color: red;
+  animation: shake 0.62s cubic-bezier(.03,.98,.98,.03) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.heal {
+  visibility: visible;
+  color: green;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 1px, -1px);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, -2px, 2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 3px, -1px);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, -3px, 2px);
+  }
+}
+
+#screen {
+  border: 3px solid gray;
+  border-radius: 6px;
+  width: 45%;
+  min-width: 450px; 
+  height: 250px;
+  background-image: url(images/cave.png);
+  background-repeat: no-repeat; 
+  background-size: cover;
+  margin: 10px auto;
+}
+
+#scene { 
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid black;*/
+}
+
+#dialogue {
+  background-color: black;
+  color: white;
+  border: 3px solid gray;
+  border-radius: 6px;
+  width: 45%;
+  min-width: 450px; 
+  height: 125px;
+  margin: 10px auto;
+  text-align: left;
+  overflow: scroll;
+  padding: 5px;
+}
+
+#frenzy {
+  font-style: italic; 
+  font-weight: bold; 
+  color: red;
+  display: block;
+  visibility: hidden;
+  border: 3px solid gray;
+  border-radius: 6px;
+  background-color: gold;
+  height: 30px;
+  width: 16.5%;
+  margin: 0 auto; 
+  margin-bottom: 10px;
+  outline: none;
+  padding: 3px;
+}
+
+.attacks, .charClass {
+  display: inline-block;
+  border: 3px solid gray;
+  border-radius: 6px;
+  height: 30px;
+  width: 16.5%;
+  margin: 0 auto; 
+  outline: none;
+  padding: 3px;
+  font-weight: bold;  
+}
+
+.attacks:hover, .charClass:hover, .controls:hover {
+  background-color: teal; 
+  transition: 0.3s;
+}
+
+.charClass {
+  display: none;
+  position: relative;
+  top: 10px;
+  margin: 10px auto;
+}
+
+.controls {
+  display: block;
+  border: 3px solid gray;
+  width: 10%;
+  margin: 10px auto;
+  border-radius: 6px;
+  outline: none;
+  padding-top: 5px;
+  font-weight: 900;
+}
+
+#guide-text {
+  color: blue;
+  font-family: "Mono Space", monospace; 
+  font-weight: 700;
+}

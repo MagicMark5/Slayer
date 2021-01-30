@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>slayer</title>
+    <link rel="stylesheet" type="text/css" href="slayer.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1">
+  </head>
+<body>
+
+<header>
+  <div class="healthHeader">
+	  <div class="healthBar" id="dragonDivBar"><span class="health" id="dragonHealth"></span></div>
+	  <div class="healthBar" id="playerDivBar"><span class="health" id="playerHealth"></span></div>
+	  <span class="damage" id="yourDamage"></span>
+	  <div class="hit-points"><span id="name-HP">Your HP</span> <span id="user-HP"></span></div>
+	  <div class="hit-points">Dragon HP <span id="enemy-HP"></span></div>
+	  <span class="damage" id="dragonDamage"></span>
+  </div>
+</header>
+
+<section id="animation-screen">
+  
+  <div id="screen">
+    <button class="charClass" id="char1"></button>
+    <button class="charClass" id="char2"></button>
+    <button class="charClass" id="char3"></button>
+    <button class="charClass" id="char4"></button>
+  	<canvas id="scene" width=555 height=245></canvas>
+  </div>
+  
+</section>
+
+<section id="gameplay-text">
+  
+  <div id="dialogue"></div>
+  
+</section>
+
+<section id="controller">
+  
+  <button class="special-att" id="frenzy">FRENZY!</button>
+  
+  <button class="attacks" id="attack1"></button>
+  <button class="attacks" id="attack2"></button>
+  <button class="attacks" id="attack3"></button>
+  <button class="attacks" id="attack4"></button>
+  
+  <button class="controls" id="slay">SLAY</button>
+  <button class="controls" id="play-again">PLAY AGAIN</button>
+
+  <p class="NPC" id="guide-text">Click the SLAY button to begin!</p>
+  
+</section>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="slayer-sprites.js"></script>
+<script src="slayer.js"></script>
+</body>
+</html>
